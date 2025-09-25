@@ -15,7 +15,7 @@ This project focuses on **customer segmentation** using machine learning techniq
 The goal is to group customers into different clusters based on their **purchasing behavior** (Annual Income & Spending Score) and extract meaningful insights that businesses can use for **targeted marketing, personalized offers, and strategic decision-making**.
 
 This project was implemented in **Google Colab** for ease of use, reproducibility, and interactive analysis.  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SharonneKemboi/Customer-Segmentation-Analysis/blob/master/Customer_Segmentation.ipynb)
-![Clusters](CLUSTERS.PNG)
+![Clusters](https://github.com/SharonneKemboi/Customer-Segmentation-Analysis/blob/master/Customer%20Mall.PNG)
 
 >  Special thanks to **Arch Technologies** for the opportunity to learn and engage in such a project.  
 ###  Key Objectives
