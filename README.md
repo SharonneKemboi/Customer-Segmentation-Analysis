@@ -1,107 +1,115 @@
 # Customer Segmentation using K-Means Clustering
+![Customer Segmentation](https://img.shields.io/badge/ML-Clustering-blue)  
+![KMeans](https://img.shields.io/badge/Algorithm-KMeans-orange)  
+![Google Colab](https://img.shields.io/badge/Platform-Google%20Colab-yellow)  
+![Python](https://img.shields.io/badge/Language-Python-green)  
+
 
 ##  Project Overview
 This project focuses on **customer segmentation** using machine learning techniques.  
 The goal is to group customers into different clusters based on their **purchasing behavior** (Annual Income & Spending Score) and extract meaningful insights that businesses can use for **targeted marketing, personalized offers, and strategic decision-making**.
 
-This project was implemented in **Google Colab** for ease of use, reproducibility, and interactive analysis.  
+This project was implemented in **Google Colab** for ease of use, reproducibility, and interactive analysis.  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SharonneKemboi/Customer-Segmentation-Analysis/blob/master/Customer_Segmentation.ipynb)
 
 >  Special thanks to **Arch Technologies** for the opportunity to learn and engage in such a project.  
+##  Objectives
+The main goals of this project are:
+1. Perform **Exploratory Data Analysis (EDA)** on customer data.  
+2. Handle **missing values** and clean data for better analysis.  
+3. Transform categorical variables for compatibility with ML algorithms.  
+4. Apply **K-Means clustering** for customer segmentation.  
+5. Use the **Elbow Method** to find the optimal number of clusters.  
+6. Visualize and interpret results to provide **actionable business insights**.  
 
----
+## Features of This Project
+- Clean, well-documented **Google Colab notebook**  
+- Beautiful visualizations with seaborn & matplotlib  
+- Handles **missing values & outliers** effectively  
+- Step-by-step **EDA with plots & tables**  
+- Cluster visualization in **2D & 3D**  
+- Easy to follow for **students, teachers, and professionals**  
 
-##  Run the Project
-Click below to open the notebook directly in **Google Colab**:
+## Dataset
+The dataset contains **200 customers** with the following features:
 
+| Column Name              | Description                                |
+|---------------------------|--------------------------------------------|
+| `CustomerID`             | Unique ID assigned to each customer        |
+| `Genre`                  | Gender of the customer (Male/Female)       |
+| `Age`                    | Age of the customer                       |
+| `Annual Income (k$)`     | Annual income of the customer in $1000s    |
+| `Spending Score (1-100)` | Score assigned based on purchasing habits  |
+
+## Exploratory Data Analysis (EDA)
+We explored the dataset through:
+- Descriptive statistics (mean, median, etc.)  
+- Distribution plots of Age, Income, and Spending Score  
+- Boxplots to identify outliers  
+- Correlation heatmaps for feature relationships  
+- Pairplots to explore feature interactions  
+
+## Machine Learning: K-Means Clustering
+###  Steps:
+1. **Preprocessing** – Handle missing values, label encode `Genre`, and scale numerical features.  
+2. **Choosing features** – Focus on `Annual Income` and `Spending Score` for clustering.  
+3. **Elbow Method** – Determine optimal clusters (usually 5).  
+4. **Apply K-Means** – Segment customers into groups.  
+5. **Visualization** – Scatter plots and cluster centroids.  
+
+## Results & Insights
+The clustering produced **5 distinct customer segments**:
+1. **High Income – Low Spending** → Potential customers (need targeted offers).  
+2. **High Income – High Spending** → VIP customers (loyal, high-value).  
+3. **Low Income – High Spending** → Price-sensitive but frequent shoppers.  
+4. **Low Income – Low Spending** → Less engaged customers.  
+5. **Middle Income – Moderate Spending** → Average group with moderate potential.  
+
+**Business Value**: These insights help businesses design **personalized marketing strategies** like targeted promotions, loyalty programs, and efficient resource allocation.  
+## Visualizations
+Here are some example visualizations used in the project:
+
+- Distribution of Annual Income & Spending Score
+- Heatmap of Correlations  
+- Elbow Method Curve  
+- Cluster Visualization (2D Scatter & 3D Plot) 
+
+You can run and view all visuals in the Colab notebook.
+
+##  How to Use This Project
+###  Option 1: Run on Google Colab (Recommended )
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SharonneKemboi/Customer-Segmentation-Analysis/blob/master/Customer_Segmentation.ipynb)
 
+###  Option 2: Run Locally
+1. Clone this repo  
+   ```bash
+   git clone https://github.com/SharonneKemboi/Customer-Segmentation-Analysis.git
+   cd Customer-Segmentation-Analysis
+Install requirements
 
-##  Tech Stack & Dependencies
-The project is built using **Python** and popular ML/data science libraries:
-
-##  Tools & Libraries
-- pandas & numpy** → data cleaning & manipulation  
-- matplotlib, seaborn & plotly** → data visualization  
-- scikit-learn** → K-Means clustering, scaling, evaluation metrics  
-- missingno** → missing values visualization  
-
-
-##  Dataset
-- **File**: `Mall_Customers.csv`  
+Copy code
+>>
+ pip install -r requirements.txt
+ Run Jupyter Notebook or any IDE.
 
 
-##  Exploratory Data Analysis (EDA)
-I managed to perform the following EDA to better understand the dataset:
-
-- Data Overview & Summary Statistics  
-- Missing Values Check** (visualized with `missingno`)  
-- Feature Distributions** (Age, Income, Spending Score)  
-- Correlation Heatmap** to explore relationships between numerical features  
-
-*Visual Examples:*  
-![Data Preview](images/data_preview.png)  
-![Distributions](images/distributions.png)  
-![Correlation Heatmap](images/correlation_heatmap.png)  
+## Conclusion
+1. K-Means successfully segmented customers into 5 actionable groups.
+2. The Elbow Method helped determine the optimal cluster count.
 
 
+## Acknowledgments
+ > Special thanks to Arch Technology for the opportunity to learn and engage in such a project.
+ > Gratitude to the open-source community for datasets and libraries.
 
-##  Preprocessing
-- Removed missing values  
-- Encoded categorical variables (`Genre`)  
-- Scaled numerical features for clustering  
+## License
+  > This project is licensed under the MIT License – feel free to use, modify, and share with attribution.
 
+- Feel free to open issues or contribute via pull requests.
 
-##  Clustering
-- Applied the **Elbow Method** and **Silhouette Score** to identify the optimal number of clusters  
-- Selected **5 clusters** for segmentation  
-- Built the **K-Means model** and assigned each customer to a cluster  
+### Connect
+Author: Sharonne Kemboi
+Location: Nairobi, Kenya
+Interests: Data Science | AI | Machine Learning | Deep Learning |Data Analytics
 
-*Visual Examples:*  
-![Elbow Method](images/elbow_method.png)  
-![Clusters](images/clusters.png)  
-
-
-##  Results & Insights
-
-### Cluster Profiles
-| Cluster | Avg Age | Avg Income | Avg Spending Score | Segment Insight |
-|---------|----------|-------------|----------------------|-----------------|
-| 0 | ... | ... | ... | High Income, High Spending → Premium Customers  |
-| 1 | ... | ... | ... | Low Income, Low Spending → Not Engaged  |
-| 2 | ... | ... | ... | High Income, Low Spending → Upsell Opportunity  |
-| 3 | ... | ... | ... | Low Income, High Spending → Budget Loyalists  |
-| 4 | ... | ... | ... | Middle Class, Moderate Spending → Growth Segment  |
-
-*Cluster Analysis Visuals:*  
-![Cluster Profiles](images/cluster_profiles.png)  
-![Pairplot](images/pairplot.png)  
-
-
-
-##  Insights
-- **Cluster 0 (Premium Customers):** High potential for **exclusive offers**  
-- **Cluster 1 (Not Engaged):** Focus on **re-engagement strategies**  
-- **Cluster 2 (Upsell Opportunity):** Encourage higher spending through **premium packages**  
-- **Cluster 3 (Budget Loyalists):** Maintain loyalty with **discount-driven campaigns**  
-- **Cluster 4 (Growth Segment):** Represent **middle-income customers** who could grow into premium  
-
-##  Conclusion
-- Successfully segmented customers into **5 distinct groups**  
-- Provided insights that can help businesses design **personalized marketing strategies**  
-- Suggested future improvements:
-  - Add more features (purchase history, frequency, product categories)  
-  - Experiment with alternative clustering algorithms (Agglomerative, DBSCAN)  
-  - Validate with cross-industry datasets  
-
-
-##  Acknowledgements
-- Implemented in **Google Colab**  
-- Special thanks to **Arch Technologies** for providing the opportunity to learn, explore, and engage in this project.
-
----
-Author
-
-Sharon Kemboi
-📍 Nairobi, Kenya
-Data & Business Analyst | AI & Data Enthusiast
+[LinkedIn](https://www.linkedin.com/in/sharonne-kemboi/) | [GitHub](https://github/SharonneKemboi/)
 
